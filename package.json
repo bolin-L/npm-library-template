@@ -1,29 +1,27 @@
 {
-  "name": "npm-library-template",
+  "name": "@afe/cdn-tools",
   "version": "1.0.0",
-  "description": "a template of npm libarary",
+  "description": "各个环境CDN域名配置工具",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./test/index.js --compilers js:@babel/register --no-deprecation",
+    "test": "./node_modules/mocha/bin/mocha --require @babel/register ./test/index.js",
     "coverage": "./node_modules/nyc/bin/nyc.js --reporter=lcov npm test",
     "eslint": "./node_modules/eslint/bin/eslint.js  ./src",
     "build": "npm run eslint && ./node_modules/.bin/rimraf dist && NODE_ENV=production && ./node_modules/.bin/webpack --config webpack.config.js --mode=production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bolin-L/npm-library-template.git"
+    "url": "git+http://gitlab.dc.servyou-it.com/afe/cdn-tools.git"
   },
   "keywords": [
-    "npm",
-    "library",
-    "template"
+    "cdn"
   ],
-  "author": "liaobolin",
+  "author": "liaobl",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bolin-L/npm-library-template/issues"
+    "url": "http://gitlab.dc.servyou-it.com/afe/cdn-tools/issues"
   },
-  "homepage": "https://github.com/bolin-L/npm-library-template#readme",
+  "homepage": "http://gitlab.dc.servyou-it.com/afe/cdn-tools#readme",
   "dependencies": {
     "qs-url": "^1.0.6"
   },
@@ -40,7 +38,7 @@
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-import": "^2.13.0",
-    "mocha": "^5.2.0",
+    "mocha": "^8.3.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.2",
